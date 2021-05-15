@@ -6,7 +6,7 @@ services:
     image: intermesh/groupoffice:6.3
     restart: unless-stopped
     ports:
-      - "8200:80"
+      - "7000:80"
     links:
       - db
     volumes:

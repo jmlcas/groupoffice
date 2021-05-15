@@ -3,7 +3,7 @@ version: "3.1"
 services:
   
   groupoffice:
-    image: intermesh/groupoffice:6.3
+    image: intermesh/groupoffice:6.4
     restart: unless-stopped
     ports:
       - "7000:80"
@@ -36,3 +36,5 @@ volumes:
   godata:
   goetc:
   dbdata:
+  
+  

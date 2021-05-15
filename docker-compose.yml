@@ -3,7 +3,7 @@ version: "3.1"
 services:
   
   groupoffice:
-    image: intermesh/groupoffice
+    image: intermesh/groupoffice:6.3
     restart: unless-stopped
     ports:
       - "8200:80"

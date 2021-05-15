@@ -10,8 +10,8 @@ services:
     links:
       - db
     volumes:
-      - ./godata:/var/lib/groupoffice:cached
-      - ./goetc:/etc/groupoffice:cached
+      - godata:/var/lib/groupoffice:cached
+      - goetc:/etc/groupoffice:cached
 #      Example for ssl
 #      - "./config/ssl/groupoffice:/etc/ssl/groupoffice"
 
@@ -30,7 +30,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: groupoffice
     volumes:
-      - ./dbdata:/var/lib/mysql:cached
+      - dbdata:/var/lib/mysql:cached
       
 volumes:
   godata:

@@ -4,7 +4,7 @@ services:
   
   groupoffice:
     image: intermesh/groupoffice
-    restart: unless_stopped
+    restart: unless-stopped
     ports:
       - "8200:80"
     links:
@@ -24,7 +24,7 @@ services:
 
   db:
     image: mariadb
-    restart: unless_stopped    
+    restart: unless-stopped    
     env_file:
       - ./db.env
     environment:

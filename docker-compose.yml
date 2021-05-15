@@ -1,0 +1,37 @@
+version: "3.1"
+
+services:
+  
+  groupoffice:
+    image: intermesh/groupoffice
+    restart: unless_stopped
+    ports:
+      - "7000:80"
+    links:
+      - db
+    volumes:
+      - "godata:/var/lib/groupoffice:cached"
+      - "goetc:/etc/groupoffice:cached"
+#      Example for ssl
+#      - "./config/ssl/groupoffice:/etc/ssl/groupoffice"
+
+#      Example for licenses
+#      - ./config/groupoffice-pro-6.4-license.txt:/usr/local/share/groupoffice/groupoffice-pro-6.4-license.txt
+#      - ./config/billing-6.4-license.txt:/usr/local/share/groupoffice/billing-6.4-license.txt
+#      - ./config/documents-6.4-license.txt:/usr/local/share/groupoffice/documents-6.4-license.txt
+    env_file:
+      - ./db.env  
+
+  db:
+    image: mariadb
+    restart: unless_stopped    
+    env_file:
+      - ./db.env
+    environment:
+      MYSQL_ROOT_PASSWORD: groupoffice
+    volumes:
+      - "dbdata:/var/lib/mysql:cached"
+volumes:
+  godata:
+  goetc:
+  dbdata:

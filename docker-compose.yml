@@ -2,6 +2,7 @@ services:
   
   groupoffice:
     image: intermesh/groupoffice:latest
+    container_name: group-office
     restart: unless-stopped
     ports:
       - "7000:80"
@@ -17,11 +18,13 @@ services:
 
   db:
     image: mariadb:latest
+    container_name: db
     restart: unless-stopped    
     env_file:
       - ./db.env
     environment:
       MYSQL_ROOT_PASSWORD: groupoffice
+      MARIADB_AUTO_UPGRADE: 1
     volumes:
       - dbdata:/var/lib/mysql:cached
       

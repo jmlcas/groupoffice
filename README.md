@@ -1,3 +1,3 @@
 # Group-Office
 
-Ver en "localhost:8200"
+Ver en "localhost:7000"

@@ -1,9 +1,7 @@
-version: "3.1"
-
 services:
   
   groupoffice:
-    image: intermesh/groupoffice:6.4
+    image: intermesh/groupoffice:latest
     restart: unless-stopped
     ports:
       - "7000:80"
@@ -14,16 +12,11 @@ services:
       - goetc:/etc/groupoffice:cached
 #      Example for ssl
 #      - "./config/ssl/groupoffice:/etc/ssl/groupoffice"
-
-#      Example for licenses
-#      - ./config/groupoffice-pro-6.4-license.txt:/usr/local/share/groupoffice/groupoffice-pro-6.4-license.txt
-#      - ./config/billing-6.4-license.txt:/usr/local/share/groupoffice/billing-6.4-license.txt
-#      - ./config/documents-6.4-license.txt:/usr/local/share/groupoffice/documents-6.4-license.txt
     env_file:
       - ./db.env  
 
   db:
-    image: mariadb
+    image: mariadb:latest
     restart: unless-stopped    
     env_file:
       - ./db.env

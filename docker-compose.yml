@@ -11,6 +11,7 @@ services:
     volumes:
       - godata:/var/lib/groupoffice:cached
       - goetc:/etc/groupoffice:cached
+      - ./src/studio:/usr/local/share/groupoffice/go/modules/studio
 #      Example for ssl
 #      - "./config/ssl/groupoffice:/etc/ssl/groupoffice"
     env_file:

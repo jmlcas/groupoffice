@@ -20,7 +20,7 @@ services:
   db:
     image: mariadb:latest
     container_name: db
-    restart: unless-stopped    
+    restart: unless-stopped
     env_file:
       - ./db.env
     environment:
@@ -28,10 +28,21 @@ services:
       MARIADB_AUTO_UPGRADE: 1
     volumes:
       - dbdata:/var/lib/mysql:cached
-      
+
+  collabora:
+    image: collabora/code
+    environment:
+      # For local testing only or behind a proxy that handles SSL
+      extra_params: --o:ssl.enable=false
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - "9980:9980"
+    restart:
+      unless-stopped
+
 volumes:
   godata:
   goetc:
-  dbdata:
-  
+  dbdata: 
   

@@ -1,3 +1,3 @@
 # Group-Office
 
-Ver en "localhost:7000"
+Ver en "http://localhost:7000"

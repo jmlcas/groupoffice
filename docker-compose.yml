@@ -15,7 +15,7 @@ services:
 #      Example for ssl
 #      - "./config/ssl/groupoffice:/etc/ssl/groupoffice"
     env_file:
-      - ./db.env  
+      - ./db.env
 
   db:
     image: mariadb:latest
@@ -44,5 +44,4 @@ services:
 volumes:
   godata:
   goetc:
-  dbdata: 
-  
+  dbdata:

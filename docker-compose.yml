@@ -34,7 +34,7 @@ services:
     environment:
       # For local testing only or behind a proxy that handles SSL
       extra_params: --o:ssl.enable=false   # --o:ssl.termination=true
-      # domain: tudominio.com      
+      # domain: tudominio.com
     cap_add:
       - SYS_ADMIN
     ports:

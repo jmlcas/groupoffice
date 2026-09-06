@@ -33,8 +33,8 @@ services:
     image: collabora/code
     environment:
       # For local testing only or behind a proxy that handles SSL
-      extra_params: --o:ssl.enable=false --o:ssl.termination=true
-      domain: localhost:9980 # IP:puerto ó tudominio.com      
+      extra_params: --o:ssl.enable=false   # --o:ssl.termination=true
+      # domain: tudominio.com      
     cap_add:
       - SYS_ADMIN
     ports:

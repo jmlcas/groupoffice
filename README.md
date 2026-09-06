@@ -1,7 +1,5 @@
 # Group-Office
 
-Permitir que el contenedor escriba en los directorios de trabajo:
-
-$ sudo chmod a+rwx -R ~/docker/groupoffice
-
 Ver en "http://localhost:7000"
+
+Al pasar de IPs a subdominios con Collabora Online tras un proxy inverso como Nginx Proxy Manager (NPM) debes activar WebSockets.

@@ -2,7 +2,7 @@ services:
 
   groupoffice:
     image: intermesh/groupoffice:latest
-    container_name: group-office
+    container_name: groupoffice
     restart: unless-stopped
     ports:
       - "7000:80"
@@ -12,8 +12,6 @@ services:
       - godata:/var/lib/groupoffice:cached
       - goetc:/etc/groupoffice:cached
       - ./src/studio:/usr/local/share/groupoffice/go/modules/studio
-#      Example for ssl
-#      - "./config/ssl/groupoffice:/etc/ssl/groupoffice"
     env_file:
       - ./db.env
 
@@ -30,7 +28,7 @@ services:
       - dbdata:/var/lib/mysql:cached
 
   collabora:
-    image: collabora/code
+    image: collabora/code:latest
     environment:
       # For local testing only or behind a proxy that handles SSL
       extra_params: --o:ssl.enable=false   # --o:ssl.termination=true

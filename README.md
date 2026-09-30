@@ -7,5 +7,5 @@ Al pasar de IPs a subdominios con Collabora Online tras un proxy inverso como Ng
 --------------------
 
 [![Ver vídeo](https://img.youtube.com/vi/m2ljYFJwHYg/0.jpg)](https://www.youtube.com/watch?v=m2ljYFJwHYg)
-
+<br
 [![Ver vídeo](https://img.youtube.com/vi/0ZxwCILgZY4/0.jpg)](https://www.youtube.com/watch?v=0ZxwCILgZY4)
